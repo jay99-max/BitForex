@@ -6,10 +6,5 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "functions": {
-    "app": {
-      "maxDuration": 10
-    }
-  }
+  "trailingSlash": false
 }
