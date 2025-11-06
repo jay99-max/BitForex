@@ -1,3 +1,4 @@
+// src/pages/Login.jsx — FULL UPDATED & FINAL
 import { useState, useEffect, useContext } from 'react'
 import { motion } from 'framer-motion'
 import { Lock, Mail } from 'lucide-react'
@@ -46,15 +47,19 @@ export default function Login() {
       return setError(t.invalidCredentials)
     }
 
-    localStorage.clear()
-    localStorage.setItem('userName', user.name)
-    localStorage.setItem('userConfig', JSON.stringify({
-      totalBalance: user.totalBalance,
-      withdrawableMin: user.withdrawableMin,
-      withdrawableMax: user.withdrawableMax,
-    }))
+    // SAFE LOCALSTORAGE (Vercel SSR safe)
+    if (typeof window !== 'undefined') {
+      localStorage.clear()
+      localStorage.setItem('userName', user.name)
+      localStorage.setItem('userConfig', JSON.stringify({
+        totalBalance: user.totalBalance,
+        withdrawableMin: user.withdrawableMin,
+        withdrawableMax: user.withdrawableMax,
+      }))
+    }
 
-    window.location.href = '/landing'
+    // SPA NAVIGATION
+    navigate('/landing')
   }
 
   return (
