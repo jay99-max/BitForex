@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.crypto-font {
+  font-family: 'Orbitron', monospace;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 178, 0.5), 0 0 60px rgba(0, 255, 178, 0.3);
+}
+
+.lang-btn {
+  @apply px-3 py-1.5 text-xs font-medium rounded-lg border transition-all duration-200;
+}
+.lang-btn.active {
+  @apply bg-gradient-to-r from-teal-600 to-cyan-600 text-white border-teal-400;
+}
+.lang-btn.inactive {
+  @apply bg-black/40 text-teal-300 border-teal-500/30 hover:border-teal-400 hover:text-white;
+}
