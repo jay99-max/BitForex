@@ -1,4 +1,4 @@
-// vite.config.js — FULL UPDATED & FINAL (November 2025)
+// vite.config.js — TAILWIND v4 + VITE 5 (November 2025)
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'

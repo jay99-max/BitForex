@@ -1,15 +1,29 @@
 import { useContext } from 'react'
-import { LanguageContext } from '../App.jsx'
+import { LanguageContext } from '../App.jsx'  // ← CORRECT PATH
+import { Globe } from 'lucide-react'
 
 export default function LanguageSwitcher() {
   const { lang, setLang } = useContext(LanguageContext)
 
   return (
-    <button
-      onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
-      className="rounded-lg bg-teal-900/50 px-3 py-1.5 text-xs font-medium text-teal-300 hover:bg-teal-800/50 transition-colors"
-    >
-      {lang === 'en' ? 'ES' : 'EN'}
-    </button>
+    <div className="flex items-center gap-2 rounded-lg bg-black/30 p-2 backdrop-blur-xl">
+      <Globe className="h-4 w-4 text-teal-400" />
+      <button
+        onClick={() => setLang('en')}
+        className={`px-3 py-1 rounded text-xs font-medium transition ${
+          lang === 'en' ? 'bg-teal-600 text-white' : 'text-teal-300 hover:text-white'
+        }`}
+      >
+        EN
+      </button>
+      <button
+        onClick={() => setLang('es')}
+        className={`px-3 py-1 rounded text-xs font-medium transition ${
+          lang === 'es' ? 'bg-teal-600 text-white' : 'text-teal-300 hover:text-white'
+        }`}
+      >
+        ES
+      </button>
+    </div>
   )
 }

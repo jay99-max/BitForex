@@ -15,14 +15,24 @@ const USERS = [
     withdrawableMin: 21000,
     withdrawableMax: 21100,
   },
+  
   {
     email: 'Anabel@bitforex.online',
     password: 'Caguana2025',
     name: 'Anabel',
     totalBalance: 527.8912,
-    withdrawableMin: 527.8912,
-    withdrawableMax: 527.8912,
-  }
+    withdrawableMin: 527.8910,
+    withdrawableMax: 527.8910,
+  },
+  {
+    email: 'Syuglycarolina@gmail.com',
+    password: 'Yugly2025',
+    name: 'Carolina',
+    totalBalance: 250.8912,
+    withdrawableMin: 250.8910,
+    withdrawableMax: 250.8910,
+  },
+  
 ]
 
 export default function Login() {
